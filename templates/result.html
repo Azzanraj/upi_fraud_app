@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span>🛡️</span>
+            <h1>UPI Fraud Alert System</h1>
+        </div>
+        <button class="secure-btn">🔐 Analysis Result</button>
+    </div>
+
+    <div class="card">
+        <div class="icon">
+            {{ result[0:2] }}
+        </div>
+        <div class="{% if 'Fraudulent' in result %}fraud-text{% else %}legit-text{% endif %}">
+            {{ result[2:] }}
+        </div>
+        <div class="prob">
+            Fraud Probability: {{ probability }}
+        </div>
+        <a href="/" class="back-link">← Back to Home</a>
+        <a href="/" class="btn">🔁 Check Another Transaction</a>
+    </div>
+</body>
+</html>

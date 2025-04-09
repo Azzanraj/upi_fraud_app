@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UPI Fraud Alert System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span>🛡️</span>
+            <h1>UPI Fraud Alert System</h1>
+        </div>
+        <button class="secure-btn">🔒 Secure Analysis System</button>
+    </div>
+
+    <div class="intro">
+        <h2>UPI Fraud Detection System</h2>
+        <p>Our advanced AI system analyzes transaction details to detect potentially fraudulent activities in real-time, helping you stay protected against UPI payment scams.</p>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="icon">🕵️</div>
+            <h3>Real-Time Analysis</h3>
+            <p>Instant fraud detection for all UPI transactions</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h3>Machine Learning</h3>
+            <p>AI-powered analysis with high accuracy</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🚨</div>
+            <h3>Fraud Alerts</h3>
+            <p>Immediate notifications for suspicious activities</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Transaction Details</h2>
+        <form action="/predict" method="post">
+            <!-- Inputs remain same -->
+            {% include 'form_fields.html' %}
+            <input type="submit" value="Analyze Transaction">
+        </form>
+    </div>
+</body>
+</html>
