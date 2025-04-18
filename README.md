@@ -60,5 +60,5 @@ It contains realistic transaction patterns with features like:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/upi-fraud-detection.git
+   git clone https://github.com/Azzanraj/upi-fraud-detection.git
    cd upi-fraud-detection
